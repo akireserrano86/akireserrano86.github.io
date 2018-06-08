@@ -1,0 +1,205 @@
+<HTML>
+
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Erika Serrano | About Me</title>
+
+    <link rel="stylesheet" href="css/prism-atom-dark.css" type="text/css" media="screen" />
+
+  <script type="text/javascript" src="js/prism.js"></script>
+  <script type="text/javascript" src="js/prism.ruby.js"></script>
+  </head>
+
+  <body>
+    <div class="about-container">
+        <div class="about">
+            <img src="images/bio-pic.jpg" class="bio-pic"/>
+             <h1>Erika Serrano</h1>
+
+            <h2> Web Developer | Project Manager | Picture Taker </h2>
+            <hr class="grey" />
+            <p class="bio">
+              A hooman. Jane of all trade (multi-potentialite).
+              Passion for civic technology and project management.
+              Interested in airplanes, concerts, photography and technology.
+              Has ambitions to be a crazy cat lady.
+              Someday, there is going to be an updated version of me.
+            </p>
+            <p class = "resume">
+              <a href="https://uptowork.com/mycv/erikaserrano"> My Resume </a>
+            </p>
+        </div>
+    </div>
+        <h3>Web Applications</h3>
+        <hr class="grey" />
+        <div class="box">
+          <h4><a href="http://www.bikeview.org" class="app">BikeView</a></h4>
+          <img src="images/grammable.png" class="full-width">
+          <p>
+          A data visualization project for the Princeton Bicycle and
+          Pedestrian Advisory Committee, using PHP, HTML and CSS for
+          web development. Uses R, CartoDB, ArcGIS and D3 for data analysis
+          and visualization. Uses Git and Github for version control.
+      </p>
+        </div>
+        <div class="box">
+          <h4>GTFS Builder</h4>
+          <img src="images/flixter.png" class="full-width">
+          <p>
+          A web application to create Google Transit Feed
+          Specification files for the Greater Mercer Transportation
+          Management Authority. Uses Javascript, HTML and CSS.
+          The second iteration will include database and some back-end
+          programming.
+      </p>
+        </div>
+        <br class="clear" />
+        <div class="box">
+          <h4><a href="https://codepen.io/akireserrano86/" class="app">My Code Pens</a></h4>
+          <img src="images/splurty.png" class="full-width">
+          <p>
+          A collection of small programs (pens) created for the Google and Udacity
+          Scholarship program (January - April 2018). Uses HTML, CSS and Javascript
+      </p>
+
+        </div>
+        <div class="box">
+          <h4>Job Axle</h4>
+          <img src="images/todoster.png" class="full-width">
+          <p>
+          A database-powered job search engine that crawls through 3 top
+          job search websites (Dice, Indeed and Monster). Uses Java for web scraping,
+          CodeIgniter PHP framework for the web application.
+      </p>
+        </div>
+        <br class="clear" />
+
+        <h3>Code Snippets</h3>
+        <hr class="grey" />
+
+        <div class="box">
+          <h4>Temperature Conversion</h4>
+           <p>
+             This ruby program will prompt the user for a temperature
+             in degrees Celsius and let the user know what the
+             corresponding temperature is in Fahrenheit.
+           </p>
+        </div>
+        <div class="box">
+
+        <pre><code class="language-ruby">
+          def convert(celsius)
+            return celsius * 1.8 + 32
+          end
+
+          puts &quot;Enter Temperature in Celsius:&quot;
+          celsius = gets.chomp.to_f
+          farenheit = convert(celsius)
+          puts &quot;#{celsius} Celsius is #{farenheit} Farenheit&quot;
+        </code></pre>
+
+        </div>
+
+        <br class="clear" />
+
+        <div class="box">
+          <pre><code class="language-ruby">
+            def calc_line(num)
+
+              if num % 10 == 1
+                  puts &quot;That's the #{num}st item!&quot;
+              elsif num % 10 == 2
+                  puts &quot;That's the #{num}nd item!&quot;
+              elsif num % 10 == 3
+                  puts &quot;That's the #{num}rd item!&quot;
+              else
+                  puts &quot;That's the #{num}th item!&quot;
+              end
+
+            end
+
+            def calc_ordinal(num)
+
+              if num % 100 &lt; 11
+                calc_line(num)
+              else
+                if num &lt;= 99
+                  if num == 11 || num == 12 || num == 13
+                    puts &quot;That's the #{num}th item!&quot;
+                  else
+                    calc_line(num)
+                  end
+                else
+                  puts &quot;That's the #{num}th item!&quot;
+                end
+              end
+
+            end
+
+            puts &quot;Enter number:&quot;
+            num = gets.chomp.to_i
+            calc_ordinal(num)
+
+          </code>
+
+          </pre>
+        </div>
+        <div class="box">
+          <h4>Ordinal Challenge</h4>
+          <p>
+            This ruby program will convert a plain number
+            to the ordinal of the number. So for example,
+            if the user enters 2, it will display 2nd, if
+            the user enters 3, it will display 3rd, etc.
+          </p>
+        </div>
+
+            <br class="clear" />
+        <div class="box">
+          <h4>Foobar</h4>
+          <p>
+            This ruby program is an adaptation of a classic technical
+            interview problem which displays sequences
+            of the Foobar pattern.
+          </p>
+        </div>
+
+        <div class="box">
+        <pre><code class="language-ruby">
+          def foobar(seq)
+            foo = []
+            num = 1
+
+            while num &lt;= seq
+              if num % 3 == 0 &amp;&amp; num % 5 == 0
+                  foo &lt;&lt; &quot;foobar&quot;
+              elsif num % 5 == 0
+                  foo &lt;&lt; &quot;bar&quot;
+              elsif num % 3 == 0
+                  foo &lt;&lt; &quot;foo&quot;
+              else
+                  foo &lt;&lt; num
+              end
+              num = num + 1
+            end
+            puts foo.inspect
+          end
+
+            puts &quot;How many digits in the sequence?&quot;
+            seq = gets.chomp.to_i
+
+            foobar(seq)
+        </code></pre>
+        </div>
+
+            <br class="clear" />
+        <h3>Contact Me</h3>
+        <hr class="grey" />
+        <p class="skills">
+      <a href="mailto:hello@erikaserrano.com" class="email"> hello@erikaserrano.com </a> <br />
+        (323) 384-8991
+        </p>
+
+  </body>
+
+</HTML>
